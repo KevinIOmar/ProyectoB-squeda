@@ -6,9 +6,9 @@
 package Presentacion;
 
 import Datos.Consulta;
-//import Logica.Cuenta;
 import java.awt.event.*;
-//import java.awt.event.KeyEvent;
+import javafx.event.*;
+//import Logica.Cuenta;
 
 import javax.swing.*;
 
@@ -26,6 +26,7 @@ public class Plogin extends JFrame{
     private final JButton btnIngresar;
     private final JButton btnCancelar;
     
+    
     public Plogin(){
         setTitle("Ingresar al sistema");
         //ancho largo
@@ -42,6 +43,7 @@ public class Plogin extends JFrame{
         
         btnIngresar=new JButton("Ingresar");
         btnCancelar=new JButton("Cancelar");
+        
         
         
         add(lblUsuario);
@@ -62,6 +64,7 @@ public class Plogin extends JFrame{
         
         btnIngresar.setBounds(150,145,100,25);
         btnCancelar.setBounds(250,145,150,25);
+        
         
         btnIngresar.addActionListener(this::btnIngresarActionPerformed);
         

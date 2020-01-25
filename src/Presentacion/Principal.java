@@ -7,7 +7,10 @@ package Presentacion;
 
 import Datos.Consulta;
 import Logica.ACatributos;
-import java.awt.event.*;
+import java.awt.event.MouseAdapter;
+import javafx.event.ActionEvent;
+import javafx.scene.input.MouseEvent;
+
 
 //import java.sql.ResultSet;
 //import java.sql.SQLException;
@@ -137,7 +140,6 @@ public class Principal extends JFrame{
         btnEliminar.addActionListener(this::btnEliminarActionPerformed);
         
         tblUsuario.addMouseListener(new MouseAdapter(){
-        @Override
         public void mouseClicked(MouseEvent evt)
         {
         tblUsuarioMouseClicked(evt);
@@ -172,7 +174,6 @@ public class Principal extends JFrame{
                 datos.setApellido(txtApellido.getText());
                 datos.setTelefono(txtTelefono.getText());
                 datos.setCiudad(txtCiudad.getText());
-                
                 String msj=funciones.Eliminar(datos);
                 JOptionPane.showMessageDialog(this, msj);
             }
